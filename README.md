@@ -1,8 +1,8 @@
 # Detecting-and-Mitigating-DDOS-Attacks
 
-Detecting and Mitigating DDOS Attacks
+## Detecting and Mitigating DDOS Attacks
 
-# List all Finish (FIN) packets
+### List all Finish (FIN) packets
 machine1 : ```sudo /usr/sbin/tcpdump -Nnn -i any -s0 'tcp[13] & 1 != 0'```
 
 
