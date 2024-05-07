@@ -14,7 +14,7 @@
 
 
 ## 4. List all Push (PSH) packets
-machine1 : ```sudo /usr/sbin/tcpdump -Nnn -i any -s0 'tcp[13] & 8 != 0'```
+```sudo /usr/sbin/tcpdump -Nnn -i any -s0 'tcp[13] & 8 != 0'```
 
 
 ## 5. List all acknowledge (ACK) packets
@@ -130,7 +130,7 @@ netstat -npt  | grep SYN_RECV | awk '{print $5}' | grep -Eo '([0-9]{1,3}\.){3}[0
       2   Z.125.121.76
 ```
 
-Common and quick ways are:
+## Common and quick ways are:
 ### a. Drop subnet using ip command: 
 ```ip route add blackhole X.175.0.0/16```
 
@@ -163,7 +163,7 @@ SYN cookies dramatically reduces your CPU and memory usage durin SYN flood attac
 sysctl -a | grep tcp_syncookies
 net.ipv4.tcp_syncookies = 0
 ```
-#Enable it:
+## Enable it:
 ```sysctl -w net.ipv4.tcp_syncookies=1```
 
 
